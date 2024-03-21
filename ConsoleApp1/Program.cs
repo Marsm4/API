@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 
 string apiKey = "AIzaSyDjfTO_wi4dwzmq1yHVVGwJW6ady9kV-LU";
-string videoId = "krsBRQbOPQ4"; // Идентификатор видео, например "krsBRQbOPQ4"
+string videoId = "tWYsfOSY9vY"; //адрес видео
 
 string apiUrl = $"https://www.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics&id={videoId}&key={apiKey}";
 
@@ -22,11 +22,15 @@ using (HttpClient client = new HttpClient())
             string title = videoData.items[0].snippet.title;
             string channelTitle = videoData.items[0].snippet.channelTitle;
             int viewCount = videoData.items[0].statistics.viewCount;
+            int likeCount = videoData.items[0].statistics.likeCount;
+
 
             Console.WriteLine($"Информация о видео:");
             Console.WriteLine($"Название: {title}");
             Console.WriteLine($"Канал: {channelTitle}");
             Console.WriteLine($"Количество просмотров: {viewCount}");
+            Console.WriteLine($"Количество лайков: {likeCount}");
+
         }
         else
         {
