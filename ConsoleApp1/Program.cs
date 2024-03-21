@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 
 string apiKey = "AIzaSyDjfTO_wi4dwzmq1yHVVGwJW6ady9kV-LU";
-string videoId = "tWYsfOSY9vY"; //адрес видео
+string videoId = "XAi3VTSdTxU"; //адрес видео
 
 string apiUrl = $"https://www.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics&id={videoId}&key={apiKey}";
 
