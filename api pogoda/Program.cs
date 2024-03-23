@@ -31,14 +31,16 @@ using (HttpClient client = new HttpClient())
                 Console.WriteLine($"Прогноз на {forecastTime}:");
                 Console.WriteLine($"Температура: {temperature} °C");
                 Console.WriteLine($"Описание: {description}");
-                Console.WriteLine();
+                Console.WriteLine();              
             }
         }
         else
         {
             Console.WriteLine("Прогноз не найден.");
         }
+        Console.ReadKey();
     }
+
     catch (HttpRequestException e)
     {
         Console.WriteLine($"Ошибка при отправке запроса: {e.Message}");
